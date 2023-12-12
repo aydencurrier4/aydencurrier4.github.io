@@ -36,7 +36,7 @@ theme_set(theme_ipsum()+
 Let's analyze the `NFL2022_Stuffs` data:
 
 ```{r}
-NFL_2022Stuffs <- read_csv("https://bcdanl.github.io/data/NFL2022_stuffs.csv")
+NFL_2022Stuffs <- read.csv("https://bcdanl.github.io/data/NFL2022_stuffs.csv")
 ```
 
 
@@ -127,19 +127,29 @@ NFL2022_epa <- read_csv('https://bcdanl.github.io/data/NFL2022_epa.csv')
 # Assuming you have two data frames: NFL2022_stuffs and NFL2022_epa
 
 # Load required library
+
 library(dplyr)
 
 # Merge data frames based on common variables
-NFL_2022Stuffs_EPA <- merge(NFL_2022Stuffs, NFL2022_epa[, c("passer", "receiver", "epa")],   "passer" = "common_variable", all.x = TRUE)
 
-# Remove observations with NA in passer
-NFL2022_stuffs_EPA <- NFL2022_stuffs_EPA %>%
+# Assuming you have two data frames named NFL2022_stuffs and NFL2022_epa
+
+NFL_2022Stuffs_EPA <- NFL_2022Stuffs %>%
+  left_join(NFL2022_epa %>% select(play_id, passer, receiver, epa), by = "play_id") %>%
   filter(!is.na(passer))
 
-# Now, NFL2022_stuffs_EPA contains all variables from NFL2022_stuffs
-# and the variables passer, receiver, and epa from NFL2022_epa,
-# with observations removed if passer is NA.
 
+# Remove observations with NA in passer
+
+NFL_2022Stuffs_EPA <- NFL_2022Stuffs_EPA %>%
+
+filter(!is.na(passer))
+
+# Now, NFL2022_stuffs_EPA contains all variables from NFL2022_stuffs
+
+# and the variables passer, receiver, and epa from NFL2022_epa,
+
+# with observations removed if passer is NA.
 
 ```
 
@@ -153,7 +163,7 @@ library(ggplot2)
 
 # Filter data for the specific passers
 selected_passers <- c("J.Allen", "P.Mahomes")
-filtered_data <- NFL2022_stuffs_EPA %>% filter(passer %in% selected_passers)
+filtered_data <- NFL_2022Stuffs_EPA %>% filter(passer %in% selected_passers)
 
 # Create ggplot with geom_line
 ggplot(filtered_data, aes(x = week, y = epa, color = passer)) +
@@ -180,7 +190,7 @@ library(dplyr)
 
 # Filter data for the specific passers
 selected_passers <- c("J.Allen", "P.Mahomes")
-filtered_data <- NFL2022_stuffs_EPA %>% filter(passer %in% selected_passers)
+filtered_data <- NFL_2022Stuffs_EPA %>% filter(passer %in% selected_passers)
 
 # Calculate the mean EPA for each passer and week
 mean_epa_per_week <- filtered_data %>%
@@ -206,18 +216,54 @@ mean_epa: Mean value of epa in 2022 for each passer
 n_pass: Number of observations for each passer
 Then find the top 10 NFL passers in 2022 in terms of the mean value of epa, conditioning that n_pass must be greater than or equal to the third quantile level of n_pass.
 
-```{r}
-# Assuming you have a data frame named mean_epa_wide from the previous question
 
+Due to issues create an individual column for the term "postseam"
+
+```{r}
+# Load the required library
 library(dplyr)
 
-# Reshape the data frame to long format for summarization
-mean_epa_long <- pivot_longer(mean_epa_wide, cols = c("J.Allen", "P.Mahomes"), names_to = "passer", values_to = "mean_epa")
+# Read the CSV file
+NFL2022_epa <- readr::read_csv('https://bcdanl.github.io/data/NFL2022_epa.csv')
+
+library(dplyr)
+library(readr)
+
+# Read the data
+NFL2022_epa <- read_csv('https://bcdanl.github.io/data/NFL2022_epa.csv')
+
+# Assuming 'postseam' is the correct column name, replace it with the correct name if needed
+NFL2022_epa <- NFL2022_epa %>%
+  mutate(posteam = posteam)
+
+# Now, you can use the 'posteam' column in your subsequent analysis
+
+
+# Assuming "posteam" is already a column in the dataset, if not, replace it with the actual column name
+NFL2022_epa <- NFL2022_epa %>%
+  mutate(posteam = posteam)
+
+# View the modified dataset
+head(NFL2022_epa)
+
+```
+
+
+```{r}
+# Load the required library
+library(dplyr)
+
+# Read the CSV file
+NFL2022_epa <- readr::read_csv('https://bcdanl.github.io/data/NFL2022_epa.csv')
+
+# Assuming "posteam" is already a column in the dataset, if not, replace it with the actual column name
+NFL2022_epa <- NFL2022_epa %>%
+  mutate(posteam = posteam)
 
 # Summarize the data
-summary_data <- mean_epa_long %>%
+summary_data <- NFL2022_epa %>%
   group_by(posteam, passer) %>%
-  summarize(mean_epa = mean(mean_epa, na.rm = TRUE),
+  summarize(mean_epa = mean(epa, na.rm = TRUE),
             n_pass = n())
 
 # Find the third quantile level of n_pass
@@ -229,10 +275,13 @@ filtered_summary_data <- summary_data %>%
 
 # Find the top 10 passers based on mean_epa
 top_10_passers <- filtered_summary_data %>%
-  top_n(10, wt = mean_epa)
+   top_n(10, wt = mean_epa)
+  
 
 # View the resulting data frame
 print(top_10_passers)
+
+
 
 ```
 
