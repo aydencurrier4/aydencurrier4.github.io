@@ -9,33 +9,34 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/learning/me/my-library/in-progress?u=76115978
     - icon: instagram
       text: Instagram
       href: https://instagram.com
     - icon: github
       text: GitHub
-      href: https://github.com
+      href: https://aydencurrier4.github.io/
     - icon: file-earmark-pdf
       text: Resumé
       href: https://GITHUB_USERNAME.github.io/resume-example.pdf
     - icon: mailbox
       text: Email
-      href: mailto:YOUR_EMAIL@geneseo.edu
+      href: mailto:arc103@geneseo.edu
 
 ---
 
 
-Finley Malloc majors in Data Analytics at SUNY Geneseo. When not working on data analytics, Finley enjoys spending time unicycling and playing with her pet iguana.
+Ayden Currier Majors in Business Administration at Suny Geneseo,In his free time  
+he enjoys playing sports and spending time with his family and friends 
 
 ## Education
 
 State University of New York at Geneseo | Geneseo, NY <br>
-B.S. in Data Analytics | Aug 2022 - May 2026 <br>
-Minor in Business Administration 
+Undergraduate in Business Admin | Aug 2022 - May 2026 <br>
+
 
 ## Experience
 
-Starbucks Analytics | Data Analyst Intern | May 2024 - Aug 2024
+Grocery Store Stocker| Batavia City School District Custodian | May 2021 - Current
 
 
