@@ -2,7 +2,7 @@
 title: "Ayden Currier" 
 about:
   template: trestles  # jolla  trestles  solana  marquee  broadside
-  image: img/profile.png
+  image: "C:/Users/Ayden/Downloads/unnamed.jpg"
   image-width: 16em
   image-shape: round # rectangle  round  rounded
   
