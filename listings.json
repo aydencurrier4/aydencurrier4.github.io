@@ -3,8 +3,9 @@
     "listing": "/blog-listing.html",
     "items": [
       "/posts/welcome/index.html",
+      "/posts/NFLAnalys/NFL.html",
       "/posts/beer-markets/beer-markets.html",
-      "/posts/starwars/starwars_df.html",
+      "/posts/NFL/NFL.html",
       "/posts/post-with-code/index.html"
     ]
   }

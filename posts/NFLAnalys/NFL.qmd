@@ -117,6 +117,9 @@ ggplot(summary_data, aes(x = posteam, y = mean_pass)) +
 ```
 
 
+```{r}
+NFL2022_epa <- read_csv('https://bcdanl.github.io/data/NFL2022_epa.csv')
+```
 
 
 
@@ -127,7 +130,7 @@ ggplot(summary_data, aes(x = posteam, y = mean_pass)) +
 library(dplyr)
 
 # Merge data frames based on common variables
-NFL2022_stuffs_EPA <- merge(NFL2022_stuffs, NFL2022_epa[, c("passer", "receiver", "epa")], by = "common_variable", all.x = TRUE)
+NFL_2022Stuffs_EPA <- merge(NFL_2022Stuffs, NFL2022_epa[, c("passer", "receiver", "epa")],   "passer" = "common_variable", all.x = TRUE)
 
 # Remove observations with NA in passer
 NFL2022_stuffs_EPA <- NFL2022_stuffs_EPA %>%
