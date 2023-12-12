@@ -1,11 +1,11 @@
 ---
 title: "Welcome To My Blog"
 author: "Ayden Currier"
-date: "2023-12/11"
+date: "2023-12 / 11"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Welcome to my first blog!
 
 ![](thumbnail.jpg)
 
