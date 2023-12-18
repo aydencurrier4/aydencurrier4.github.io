@@ -5,16 +5,15 @@ date: "2023-12-17"
 categories: [Hockey, code, analysis]
 image: "image.jpg"
 ---
+In This Data analysis I will be breaking down the files from the Professional 
+hockey data set on the website Kaggle
 
+
+First off I will identify the variables that will be used throughout this 
+analysis
 
 
 ```{r}
-# Set the working directory to the folder containing your data file
-
-setwd("C:/Users/Ayden/OneDrive/Desktop/archive")
-
-data = read.csv("C:/Users/Ayden/OneDrive/Desktop/archive")
-
 
 ```
 

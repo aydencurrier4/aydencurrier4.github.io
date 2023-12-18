@@ -1,0 +1,10 @@
+{
+  "listing": "/blog-listing.html",
+  "items": [
+    "/posts/post-with-code/index.html",
+    "/posts/welcome/index.html",
+    "/posts/NFLAnalys/NFL.html",
+    "/posts/beer-markets/beer-markets.html",
+    "/posts/NFL/NFL.html"
+  ]
+}
