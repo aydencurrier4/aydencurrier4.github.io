@@ -82,15 +82,54 @@ Group variables	None
 
 
 
-## MPG and a Type of Cars
-The following boxplot shows how the distribution of highway MPG (`hwy`) varies by a type of cars (`class`) :blue_car: :truck: :minibus:.
+## Visualization
+
+What Five players have the most goals scored against?
+
 
 
 ```{r}
-ggplot(data = mpg) +
-  geom_boxplot(aes(x = class, y = hwy, fill = class),
-               show.legend = F) +
-  labs(x = "Class", y = "Highway\nMPG") 
+library(dplyr)
+top_5_goalies <- Goalies %>%
+  arrange(desc(PostGA)) %>%
+  head(5)
+
+specific_goalies1 <- c("hrudeke01", "bannemu01", "daleyjo01", "hextaro01", 
+                       "fleurma01")
+top_5_data <- subset(Goalies, playerID %in% specific_goalies1)
+
+
+ggplot(top_5_data, aes(x = playerID, fill = PostGA)) +
+  geom_bar()
 ```
 
+The player with playerID “bannemu01” showed the highest number of goals scored against
 
+What five players have the most postseason wins?
+
+```{r}
+top_5_goalies_wins <- Goalies %>%
+  arrange(desc(PostW)) %>%
+  head(5)
+print(top_5_goalies_wins)
+```
+```{r}
+specific_goalies2 <- c("barrato01", "belfoed01", "brodema01", "fleurma01", 
+                       "fuhrgr01")
+top_5_data2 <- subset(Goalies, playerID %in% specific_goalies2)
+
+
+ggplot(top_5_data2, aes(x = playerID, fill = PostW)) +
+  geom_bar()
+```
+The player with playerID “barrato01” showed the highest number of postseason wins
+
+What is the relationship between goalie shutouts and wins?
+
+```{r}
+library(ggplot2)
+ggplot(data = Goalies) +
+  geom_point(mapping = aes(x = SHO, y = W))
+```
+
+There is a positive relationship between goalie shutouts and wins. So, if a goalie continues to have shutouts, the teams chances of wining increase signifitcantly
