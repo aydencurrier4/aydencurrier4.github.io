@@ -1,10 +1,10 @@
 ---
-title: DANL Project
+title: "DANL Project"
 subtitle: "Goalies"
 author: 
-  - Ayden Currier
-  - Greta Recktenwald
-  - Abby Hofschnieder
+  - "Ayden Currier"
+  - "Greta Recktenwald"
+  - "Abby Hofschnieder"
 
 
 toc: true
