@@ -1,15 +1,20 @@
 ---
-title: "Post With Code"
-author: "YOUR NAME"
-date: "2023-10-30"
-categories: [news, code, analysis]
+title: "NHL Group Project"
+author: "Ayden Currier"
+date: "2023-12-17"
+categories: [Hockey, code, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code with no space in the folder name.
+
 
 ```{r}
-1 + 1
+# Set the working directory to the folder containing your data file
+
+setwd("C:/Users/Ayden/OneDrive/Desktop/archive")
+
+data = read.csv("C:/Users/Ayden/OneDrive/Desktop/archive")
+
+
 ```
 
-![](image.jpg)
