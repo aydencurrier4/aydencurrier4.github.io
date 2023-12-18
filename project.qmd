@@ -46,7 +46,7 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
-About this project:This project is to show my understanding of data analytics and how to use R studio with the data from Goalies.csv! https://www.kaggle.com/datasets/open-source-sports/professional-hockey-database?select=Goalies.csv
+About this project:This project is to show my understanding of data analytics and how to use R studio with the data from Goalies.csv https://www.kaggle.com/datasets/open-source-sports/professional-hockey-database?select=Goalies.csv
 
 
 
