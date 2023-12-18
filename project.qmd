@@ -2,9 +2,9 @@
 title: DANL Project
 subtitle: "Goalies"
 author: 
-  - Abby Hofschnieder
-  - Greta Recktenwald
   - Ayden Currier
+  - Greta Recktenwald
+  - Abby Hofschnieder
 
 
 toc: true
@@ -53,9 +53,8 @@ About this project:This project is to show my understanding of data analytics an
 # Data
 
 ```{r}
-library(readxl)
 Goalies <- read.csv("archive/Goalies.csv")
-
+Abbreviations <- read.csv("archive/abbrev.csv")
 ```
 
 
