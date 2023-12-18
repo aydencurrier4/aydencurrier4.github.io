@@ -14,8 +14,6 @@ analysis
 
 
 ```{r}
-
-print(abbrev)
-
+rmarkdown::paged_table(Goalies)
 ```
 # We will be diving into the 

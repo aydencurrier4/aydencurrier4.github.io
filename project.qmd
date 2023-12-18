@@ -1,12 +1,11 @@
 ---
 title: DANL Project
-subtitle: "Data-Driven Mastery: Unlocking Business Potential"
+subtitle: "Goalies"
 author: 
-  - Name 1
-  - Name 2
-  - Name 3
-  - Name 4
-  - Name 5
+  - Abby Hofschnieder
+  - Greta Recktenwald
+  - Ayden Currier
+
 
 toc: true
 toc-title: "Table of Contents"
@@ -47,35 +46,40 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
-About this project :clap:
+About this project:This project is to show my understanding of data analytics and how to use R studio with the data from Goalies.csv! https://www.kaggle.com/datasets/open-source-sports/professional-hockey-database?select=Goalies.csv
 
-```{r}
-1 + 1
-```
 
 
 # Data
 
-The data.frame `mpg` contains a subset of the fuel economy data that the EPA makes available on [https://fueleconomy.gov/](https://fueleconomy.gov/). It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. :oncoming_automobile:
+```{r}
+library(readxl)
+Goalies <- read.csv("archive/Goalies.csv")
+
+```
 
 
 ## Summary Statistics
 
 ```{r}
-mpg <- ggplot2::mpg
+rmarkdown::paged_table(Goalies)
 ```
 
 ```{r}
-#| results: asis
-#| echo: false
-rmarkdown::paged_table(mpg) 
-```
-
-
-```{r}
-skim(mpg) %>% 
+skim(Goalies) %>%
   select(-n_missing)
 ```
+
+Name	Goalies
+Number of rows	4278
+Number of columns	23
+_______________________	
+Column type frequency:	
+character	3
+numeric	20
+________________________	
+Group variables	None
+
 
 
 ## MPG and a Type of Cars

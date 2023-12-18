@@ -107,23 +107,23 @@
   {
     "objectID": "project.html",
     "href": "project.html",
-    "title": "DANL Project",
+    "title": "Introduction",
     "section": "",
-    "text": "About this project 👏\n\n1 + 1\n\n[1] 2"
+    "text": "About this project:This project is to show my understanding of data analytics and how to use R studio with the data from Goalies.csv! https://www.kaggle.com/datasets/open-source-sports/professional-hockey-database?select=Goalies.csv"
   },
   {
     "objectID": "project.html#summary-statistics",
     "href": "project.html#summary-statistics",
-    "title": "DANL Project",
-    "section": "2.1 Summary Statistics",
-    "text": "2.1 Summary Statistics\n\nmpg &lt;- ggplot2::mpg\n\n\n\n\n  \n\n\n\nskim(mpg) %&gt;% \n  select(-n_missing)\n\n\nData summary\n\n\nName\nmpg\n\n\nNumber of rows\n234\n\n\nNumber of columns\n11\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n6\n\n\nnumeric\n5\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nmanufacturer\n1\n4\n10\n0\n15\n0\n\n\nmodel\n1\n2\n22\n0\n38\n0\n\n\ntrans\n1\n8\n10\n0\n10\n0\n\n\ndrv\n1\n1\n1\n0\n3\n0\n\n\nfl\n1\n1\n1\n0\n5\n0\n\n\nclass\n1\n3\n10\n0\n7\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\ndispl\n1\n3.47\n1.29\n1.6\n2.4\n3.3\n4.6\n7\n▇▆▆▃▁\n\n\nyear\n1\n2003.50\n4.51\n1999.0\n1999.0\n2003.5\n2008.0\n2008\n▇▁▁▁▇\n\n\ncyl\n1\n5.89\n1.61\n4.0\n4.0\n6.0\n8.0\n8\n▇▁▇▁▇\n\n\ncty\n1\n16.86\n4.26\n9.0\n14.0\n17.0\n19.0\n35\n▆▇▃▁▁\n\n\nhwy\n1\n23.44\n5.95\n12.0\n18.0\n24.0\n27.0\n44\n▅▅▇▁▁"
+    "title": "Introduction",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\nrmarkdown::paged_table(Goalies)\n\n\n\n  \n\n\n\n\nskim(Goalies) %&gt;%\n  select(-n_missing)\n\n\nData summary\n\n\nName\nGoalies\n\n\nNumber of rows\n4278\n\n\nNumber of columns\n23\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n3\n\n\nnumeric\n20\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nplayerID\n1\n7\n9\n0\n788\n0\n\n\ntmID\n1\n3\n3\n0\n115\n0\n\n\nlgID\n1\n3\n4\n0\n5\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\nyear\n1.00\n1980.64\n24.53\n1909\n1972\n1986.0\n1999.0\n2011\n▁▁▂▇▇\n\n\nstint\n1.00\n1.06\n0.24\n1\n1\n1.0\n1.0\n3\n▇▁▁▁▁\n\n\nGP\n1.00\n26.55\n21.03\n1\n7\n23.0\n43.0\n79\n▇▅▃▃▁\n\n\nMin\n1.00\n1502.28\n1238.96\n0\n336\n1257.0\n2467.0\n4697\n▇▅▃▂▁\n\n\nW\n1.00\n11.02\n10.67\n0\n2\n8.0\n18.0\n48\n▇▃▂▁▁\n\n\nL\n1.00\n10.54\n8.77\n0\n3\n9.0\n17.0\n48\n▇▅▂▁▁\n\n\nT.OL\n1.00\n3.25\n3.55\n0\n0\n2.0\n5.0\n22\n▇▂▁▁▁\n\n\nENG\n0.83\n1.71\n1.93\n0\n0\n1.0\n3.0\n12\n▇▂▁▁▁\n\n\nSHO\n1.00\n1.43\n2.21\n0\n0\n0.0\n2.0\n22\n▇▁▁▁▁\n\n\nGA\n1.00\n76.37\n60.43\n0\n20\n68.0\n122.0\n310\n▇▅▃▁▁\n\n\nSA\n0.63\n734.72\n610.57\n0\n165\n604.0\n1205.0\n2488\n▇▅▃▂▁\n\n\nPostGP\n0.34\n6.07\n5.19\n1\n2\n5.0\n8.0\n26\n▇▂▁▁▁\n\n\nPostMin\n0.34\n353.04\n327.80\n0\n120\n252.0\n490.5\n1655\n▇▃▁▁▁\n\n\nPostW\n0.34\n2.81\n3.63\n0\n0\n1.0\n4.0\n16\n▇▂▁▁▁\n\n\nPostL\n0.34\n2.81\n2.20\n0\n1\n3.0\n4.0\n11\n▇▅▂▁▁\n\n\nPostT\n0.02\n0.62\n0.75\n0\n0\n0.5\n1.0\n4\n▇▆▁▁▁\n\n\nPostENG\n0.28\n0.46\n0.74\n0\n0\n0.0\n1.0\n5\n▇▁▁▁▁\n\n\nPostSHO\n0.34\n0.42\n0.85\n0\n0\n0.0\n1.0\n7\n▇▁▁▁▁\n\n\nPostGA\n0.34\n16.12\n13.65\n0\n6\n13.0\n23.0\n74\n▇▅▂▁▁\n\n\nPostSA\n0.19\n183.65\n175.92\n0\n41\n136.0\n265.0\n849\n▇▃▁▁▁\n\n\n\n\n\nName Goalies Number of rows 4278 Number of columns 23 _______________________ Column type frequency:\ncharacter 3 numeric 20 ________________________\nGroup variables None"
   },
   {
     "objectID": "project.html#mpg-and-a-type-of-cars",
     "href": "project.html#mpg-and-a-type-of-cars",
-    "title": "DANL Project",
-    "section": "2.2 MPG and a Type of Cars",
-    "text": "2.2 MPG and a Type of Cars\nThe following boxplot shows how the distribution of highway MPG (hwy) varies by a type of cars (class) 🚙 🚚 🚐.\n\nggplot(data = mpg) +\n  geom_boxplot(aes(x = class, y = hwy, fill = class),\n               show.legend = F) +\n  labs(x = \"Class\", y = \"Highway\\nMPG\")"
+    "title": "Introduction",
+    "section": "MPG and a Type of Cars",
+    "text": "MPG and a Type of Cars\nThe following boxplot shows how the distribution of highway MPG (hwy) varies by a type of cars (class) :blue_car: :truck: :minibus:.\n\nggplot(data = mpg) +\n  geom_boxplot(aes(x = class, y = hwy, fill = class),\n               show.legend = F) +\n  labs(x = \"Class\", y = \"Highway\\nMPG\") \n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family\nnot found in Windows font database\n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family\nnot found in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database"
   },
   {
     "objectID": "posts/NFLAnalys/NFL.html",
