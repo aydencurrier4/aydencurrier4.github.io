@@ -15,5 +15,7 @@ analysis
 
 ```{r}
 
-```
+print(abbrev)
 
+```
+# We will be diving into the 
