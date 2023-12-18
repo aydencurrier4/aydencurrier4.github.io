@@ -53,6 +53,7 @@ About this project:This project is to show my understanding of data analytics an
 # Data
 
 ```{r}
+library(ggplot2)
 Goalies <- read.csv("archive/Goalies.csv")
 Abbreviations <- read.csv("archive/abbrev.csv")
 ```
